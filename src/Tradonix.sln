@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradonix.Web", "Tradonix.Web\Tradonix.Web.csproj", "{A35455E4-0683-47B9-9073-353E64607E75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradonix.Core", "Tradonix.Core\Tradonix.Core.csproj", "{17BC41C0-581E-4B19-B7C3-5D0CCF1B8FDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradonix.Exchanges.Bittrex", "Tradonix.Exchanges.Bittrex\Tradonix.Exchanges.Bittrex.csproj", "{97C102C1-134A-41AA-AA09-43EE0E2D69AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A35455E4-0683-47B9-9073-353E64607E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A35455E4-0683-47B9-9073-353E64607E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A35455E4-0683-47B9-9073-353E64607E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A35455E4-0683-47B9-9073-353E64607E75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17BC41C0-581E-4B19-B7C3-5D0CCF1B8FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BC41C0-581E-4B19-B7C3-5D0CCF1B8FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BC41C0-581E-4B19-B7C3-5D0CCF1B8FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BC41C0-581E-4B19-B7C3-5D0CCF1B8FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C102C1-134A-41AA-AA09-43EE0E2D69AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C102C1-134A-41AA-AA09-43EE0E2D69AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C102C1-134A-41AA-AA09-43EE0E2D69AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C102C1-134A-41AA-AA09-43EE0E2D69AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

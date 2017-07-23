@@ -31,7 +31,6 @@ namespace Tradonix.Core.Entities
         public int CurrentOpenSellOrders { get; set; }
 
 
-
         public decimal LastPrice { get; set; }
     }
 }

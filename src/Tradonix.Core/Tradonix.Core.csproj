@@ -40,9 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BigData\TIckerOrderBookSnapShot.cs" />
+    <Compile Include="BigData\TickerSnapShot.cs" />
     <Compile Include="Entities\MarketSummary.cs" />
     <Compile Include="IExchange.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\IUIPage.cs" />
+    <Compile Include="UI\UITypeEnum.cs" />
+    <Compile Include="UI\OptionData.cs" />
+    <Compile Include="UI\IBaseData.cs" />
+    <Compile Include="UI\IOptionData.cs" />
+    <Compile Include="UI\SimpleData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

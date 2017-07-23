@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Tradonix.Core.Entities;
 
 namespace Tradonix.Core
@@ -15,7 +12,7 @@ namespace Tradonix.Core
 
         IList<string> GetSupportedTickers();
 
-        IList<MarketSummary> GetAllMarketSummaries();
+        IList<MarketSummary> GetMarketSummariesAll();
 
         MarketSummary GetMarketSummaryByTicker(string ticker);
     }

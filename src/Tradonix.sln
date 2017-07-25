@@ -7,9 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradonix.Web", "Tradonix.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradonix.Core", "Tradonix.Core\Tradonix.Core.csproj", "{17BC41C0-581E-4B19-B7C3-5D0CCF1B8FDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradonix.EFRepository", "Tradonix.EFRepository\Tradonix.EFRepository.csproj", "{9A040C4A-E277-4521-9E29-A4D066DAF4E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{748EE465-64F7-4C77-8CB9-143A4AAB98D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exchanges", "Exchanges", "{FF59447C-B82B-446A-8230-77A18D403064}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradonix.Exchanges.Bittrex", "Tradonix.Exchanges.Bittrex\Tradonix.Exchanges.Bittrex.csproj", "{97C102C1-134A-41AA-AA09-43EE0E2D69AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradonix.Exchanges.Test", "Tradonix.Exchanges.Test\Tradonix.Exchanges.Test.csproj", "{1ACF2DF5-59FE-45C4-9336-3307FC029A3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradonix.Service", "Tradonix.Service\Tradonix.Service.csproj", "{C730C006-7052-42D7-95E9-BF11BC5FA955}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +33,10 @@ Global
 		{17BC41C0-581E-4B19-B7C3-5D0CCF1B8FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17BC41C0-581E-4B19-B7C3-5D0CCF1B8FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17BC41C0-581E-4B19-B7C3-5D0CCF1B8FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A040C4A-E277-4521-9E29-A4D066DAF4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A040C4A-E277-4521-9E29-A4D066DAF4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A040C4A-E277-4521-9E29-A4D066DAF4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A040C4A-E277-4521-9E29-A4D066DAF4E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{97C102C1-134A-41AA-AA09-43EE0E2D69AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97C102C1-134A-41AA-AA09-43EE0E2D69AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97C102C1-134A-41AA-AA09-43EE0E2D69AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,8 +45,16 @@ Global
 		{1ACF2DF5-59FE-45C4-9336-3307FC029A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ACF2DF5-59FE-45C4-9336-3307FC029A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ACF2DF5-59FE-45C4-9336-3307FC029A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C730C006-7052-42D7-95E9-BF11BC5FA955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C730C006-7052-42D7-95E9-BF11BC5FA955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C730C006-7052-42D7-95E9-BF11BC5FA955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C730C006-7052-42D7-95E9-BF11BC5FA955}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97C102C1-134A-41AA-AA09-43EE0E2D69AD} = {FF59447C-B82B-446A-8230-77A18D403064}
+		{1ACF2DF5-59FE-45C4-9336-3307FC029A3D} = {748EE465-64F7-4C77-8CB9-143A4AAB98D4}
 	EndGlobalSection
 EndGlobal

@@ -40,17 +40,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BigData\TIckerOrderBookSnapShot.cs" />
-    <Compile Include="BigData\TickerSnapShot.cs" />
-    <Compile Include="Entities\MarketSummary.cs" />
+    <Compile Include="Entities\BigData\TIckerOrderBookSnapShot.cs" />
+    <Compile Include="Entities\BigData\TickerSnapShot.cs" />
+    <Compile Include="Entities\BigData\MarketType.cs" />
+    <Compile Include="Entities\IEntityBase.cs" />
+    <Compile Include="Entities\Infra\LogEntry.cs" />
+    <Compile Include="Entities\BigData\MarketSummary.cs" />
+    <Compile Include="Entities\Infra\Setting.cs" />
+    <Compile Include="Entities\Infra\Enums.cs" />
+    <Compile Include="Services\Core\IEmailService.cs" />
     <Compile Include="IExchange.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IEntityBaseRepository.cs" />
+    <Compile Include="Repository\IRepositories.cs" />
+    <Compile Include="Services\Core\IEncryptionService.cs" />
+    <Compile Include="Services\Core\ILoggingService.cs" />
+    <Compile Include="Services\Core\ISettingService.cs" />
     <Compile Include="UI\IUIPage.cs" />
     <Compile Include="UI\UITypeEnum.cs" />
     <Compile Include="UI\OptionData.cs" />
     <Compile Include="UI\IBaseData.cs" />
     <Compile Include="UI\IOptionData.cs" />
     <Compile Include="UI\SimpleData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\Trade\" />
+    <Folder Include="Services\BigData\" />
+    <Folder Include="Services\Trade\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

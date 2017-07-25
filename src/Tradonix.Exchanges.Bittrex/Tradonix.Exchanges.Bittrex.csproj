@@ -45,8 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiHelper.cs" />
+    <Compile Include="Data\Enums.cs" />
+    <Compile Include="Data\GetBalancesResponse.cs" />
+    <Compile Include="Data\GetMarketHistoryResponse.cs" />
+    <Compile Include="Data\GetOpenOrdersResponse.cs" />
+    <Compile Include="Data\GetOrderBookResponse.cs" />
+    <Compile Include="Data\GetOrderHistoryResponse.cs" />
+    <Compile Include="Data\OpenOrder.cs" />
+    <Compile Include="Data\OrderEntry.cs" />
+    <Compile Include="Data\OrderResponse.cs" />
     <Compile Include="Exchange.cs" />
     <Compile Include="Data\GetMarketSummaryResponse.cs" />
+    <Compile Include="Exchange2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

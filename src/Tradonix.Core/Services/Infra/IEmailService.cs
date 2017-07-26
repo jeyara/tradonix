@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Tradonix.Core.Helper
+namespace Tradonix.Services.Infra
 {
     public interface IEmailService
     {

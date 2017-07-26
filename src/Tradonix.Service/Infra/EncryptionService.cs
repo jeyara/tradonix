@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
-using Tradonix.Core.Services;
+using Tradonix.Services.Infra;
 
-namespace Tradonix.Service.CoreServices
+namespace Tradonix.Service.Infra
 {
     public class EncryptionService : IEncryptionService
     {

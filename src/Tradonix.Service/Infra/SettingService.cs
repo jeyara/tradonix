@@ -4,7 +4,7 @@ using Tradonix.Core.Services;
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace Tradonix.Service.CoreServices
+namespace Tradonix.Service.Infra
 {
     public class SettingService : ISettingService
     {

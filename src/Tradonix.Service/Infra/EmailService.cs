@@ -1,16 +1,12 @@
-﻿using SendGrid.Helpers.Mail;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
 using System.Threading.Tasks;
 using Tradonix.Core.Entities;
-using Tradonix.Core.Helper;
-using Tradonix.Core.Services;
+using Tradonix.Services.Infra;
 
-namespace Tradonix.Service.Core
+namespace Tradonix.Service.Infra
 {
     public class EmailService : IEmailService
     {

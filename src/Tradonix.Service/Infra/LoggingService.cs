@@ -1,9 +1,9 @@
-﻿using Tradonix.Core.Services;
-using System;
+﻿using System;
 using Tradonix.Core.Entities;
 using Tradonix.Core.Repository;
+using Tradonix.Services.Infra;
 
-namespace Tradonix.Service.CoreServices
+namespace Tradonix.Service.Infra
 {
     public class LoggingService : ILoggingService
     {

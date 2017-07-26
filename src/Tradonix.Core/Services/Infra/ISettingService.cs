@@ -1,6 +1,6 @@
 ﻿using Tradonix.Core.Entities;
 
-namespace Tradonix.Core.Services
+namespace Tradonix.Services.Infra
 {
     public interface ISettingService
     {

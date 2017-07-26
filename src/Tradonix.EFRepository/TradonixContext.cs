@@ -13,6 +13,10 @@ namespace Tradonix.EFRepository
     {
         public DbSet<LogEntry> LogEntry { get; set; }
         public DbSet<Setting> Setting { get; set; }
+        public DbSet<Exchange> Exchange { get; set; }
+        public DbSet<Ticker> Ticker { get; set; }
+        public DbSet<ExchangeTicker> ExchangeTicker { get; set; }
+        public DbSet<MarketSummary> MarketSummary { get; set; }
 
         public TradonixContext() : base("name=Tradonix")
         {
@@ -84,13 +88,17 @@ namespace Tradonix.EFRepository
             modelBuilder.Entity<ExchangeTicker>().Property(s => s.UpdatedOn).IsOptional();
             modelBuilder.Entity<ExchangeTicker>().Property(s => s.UpdatedBy).IsOptional();
 
+            modelBuilder.Entity<ExchangeTicker>().Ignore(s => s.Exchange);
+            modelBuilder.Entity<ExchangeTicker>().Ignore(s => s.Ticker);
+            modelBuilder.Entity<ExchangeTicker>().Ignore(s => s.BaseTicker);
+
             modelBuilder.Entity<ExchangeTicker>().Property(s => s.ExchangeId).HasColumnAnnotation(IndexAnnotation.AnnotationName, new IndexAnnotation(new IndexAttribute("IX_Exchange_Ticker_BaseTicker", 1) { IsUnique = true }));
             modelBuilder.Entity<ExchangeTicker>().Property(s => s.TickerId).HasColumnAnnotation(IndexAnnotation.AnnotationName, new IndexAnnotation(new IndexAttribute("IX_Exchange_Ticker_BaseTicker", 2) { IsUnique = true }));
             modelBuilder.Entity<ExchangeTicker>().Property(s => s.BaseTickerId).HasColumnAnnotation(IndexAnnotation.AnnotationName, new IndexAnnotation(new IndexAttribute("IX_Exchange_Ticker_BaseTicker", 3) { IsUnique = true }));
 
-            modelBuilder.Entity<ExchangeTicker>().Ignore(s => s.Exchange);
-            modelBuilder.Entity<ExchangeTicker>().Ignore(s => s.Ticker);
-            modelBuilder.Entity<ExchangeTicker>().Ignore(s => s.BaseTicker);
+            modelBuilder.Entity<ExchangeTicker>().HasRequired(t => t.Ticker).WithMany(p => p.ExchangeTickers).HasForeignKey(f => f.TickerId);
+            modelBuilder.Entity<ExchangeTicker>().HasRequired(t => t.BaseTicker).WithMany(p=> p.ExchangeTickers).HasForeignKey(f=>f.BaseTickerId);
+            modelBuilder.Entity<ExchangeTicker>().HasRequired(t => t.Exchange).WithMany(p => p.ExchangeTickers).HasForeignKey(f => f.ExchangeId);
 
 
             modelBuilder.Entity<MarketSummary>().HasKey(s => s.Id);
@@ -106,13 +114,9 @@ namespace Tradonix.EFRepository
             modelBuilder.Entity<MarketSummary>().Property(s => s.RawData).IsOptional();
             modelBuilder.Entity<MarketSummary>().Property(s => s.AddedOn).IsRequired();
             modelBuilder.Entity<MarketSummary>().Property(s => s.AddedBy).IsRequired();
-
-            //modelBuilder.Entity<MarketSummary>().HasRequired(t=>t.ExchangeTickerId)
-            //    .WithMany(p=> p.)
-
-
             modelBuilder.Entity<MarketSummary>().Ignore(s => s.ExchangeTicker);
 
+            modelBuilder.Entity<MarketSummary>().HasRequired(t => t.ExchangeTicker);
 
 
             base.OnModelCreating(modelBuilder);

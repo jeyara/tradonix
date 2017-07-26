@@ -53,8 +53,12 @@
     <Compile Include="DbInitializer.cs" />
     <Compile Include="EntityBaseRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Repositories\LoggingRepository.cs" />
-    <Compile Include="Repositories\SettingRepository.cs" />
+    <Compile Include="Repositories\Meta\ExchangeRepository.cs" />
+    <Compile Include="Repositories\Meta\ExhangeTickerRepository.cs" />
+    <Compile Include="Repositories\Infra\LoggingRepository.cs" />
+    <Compile Include="Repositories\Transaction\MarketSummaryRepository.cs" />
+    <Compile Include="Repositories\Infra\SettingRepository.cs" />
+    <Compile Include="Repositories\Meta\TickerRepository.cs" />
     <Compile Include="TradonixContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

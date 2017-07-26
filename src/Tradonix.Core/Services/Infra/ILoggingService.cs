@@ -1,7 +1,7 @@
 ﻿using Tradonix.Core.Entities;
 using System;
 
-namespace Tradonix.Core.Services
+namespace Tradonix.Services.Infra
 {
     public interface ILoggingService
     {

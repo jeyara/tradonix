@@ -25,9 +25,11 @@ namespace Tradonix.EFRepository
                 // create host api urls
                 context.Setting.AddRange(new Setting[]
                 {
-                    new Setting { Key = SettingKeys.SendGridUsername.ToString(), Value ="@azure.com" },
-                    new Setting { Key = SettingKeys.SendGridPassword.ToString(), Value ="@233" },
-                    new Setting { Key = SettingKeys.SendGridEmailFrom.ToString(), Value ="tradonix@jeyara.com" },
+                    new Setting { Key = SettingKeys.MailSMTPAddress.ToString(), Value ="smtp.sendgrid.net" },
+                    new Setting { Key = SettingKeys.MailSMTPPort.ToString(), Value ="587" },
+                    new Setting { Key = SettingKeys.MailUserName.ToString(), Value ="azure_9aa4dfe90b02fb6804037ac3fc38a71a@azure.com" },
+                    new Setting { Key = SettingKeys.MailPassword.ToString(), Value ="abc123" },
+                    new Setting { Key = SettingKeys.MailFrom.ToString(), Value ="tradonix@jeyara.com" },
                 });
 
                 context.SaveChanges();

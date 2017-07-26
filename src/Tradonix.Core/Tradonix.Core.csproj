@@ -40,12 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\BigData\TIckerOrderBookSnapShot.cs" />
-    <Compile Include="Entities\BigData\TickerSnapShot.cs" />
-    <Compile Include="Entities\BigData\MarketType.cs" />
+    <Compile Include="Entities\Meta\Enums.cs" />
+    <Compile Include="Entities\Meta\Entities.cs" />
     <Compile Include="Entities\IEntityBase.cs" />
     <Compile Include="Entities\Infra\LogEntry.cs" />
-    <Compile Include="Entities\BigData\MarketSummary.cs" />
+    <Compile Include="Entities\Transaction\Entities.cs" />
     <Compile Include="Entities\Infra\Setting.cs" />
     <Compile Include="Entities\Infra\Enums.cs" />
     <Compile Include="Services\Core\IEmailService.cs" />

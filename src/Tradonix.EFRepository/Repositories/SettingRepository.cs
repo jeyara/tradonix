@@ -1,6 +1,5 @@
 ﻿using System;
 using Tradonix.Core.Entities;
-using Tradonix.Core.Enums;
 using Tradonix.Core.Repository;
 
 namespace Tradonix.EFRepository.Repositories

@@ -5,7 +5,9 @@ using Tradonix.Core.Services;
 using Tradonix.EFRepository;
 using Tradonix.EFRepository.Repositories;
 using Tradonix.Service.CoreServices;
-using Tradonix.Service.Service.Core;
+using Tradonix.Service.Core;
+using System.Web.Mvc;
+using System.Web.Http;
 
 namespace Tradonix.Web
 {
@@ -26,6 +28,15 @@ namespace Tradonix.Web
             container.RegisterType<ISettingService, SettingService>();
 
             container.RegisterType<IEmailService, EmailService>();
+
+            return container;
+        }
+
+        public static void Initialise()
+        {
+            var container = RegisterComponents();
+            DependencyResolver.SetResolver(new Microsoft.Practices.Unity.Mvc.UnityDependencyResolver(container));
+            GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
         }
     }
 }

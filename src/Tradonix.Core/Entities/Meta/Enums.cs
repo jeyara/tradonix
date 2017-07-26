@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tradonix.Core.BigData
+namespace Tradonix.Core.Entities.Meta
 {
-    public class TIckerOrderBookSnapShot
+    public enum TickerType
     {
+        Currecny = 10,
+        CryptoCoin = 20,
+        Stock = 30,
     }
 }

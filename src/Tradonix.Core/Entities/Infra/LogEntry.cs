@@ -4,7 +4,7 @@ namespace Tradonix.Core.Entities
 {
     public class LogEntry : IEntityBase
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public System.DateTimeOffset Timestamp { get; set; }
         public string HostName { get; set; }
         public string LogType { get; set; }

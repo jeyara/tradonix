@@ -28,7 +28,7 @@ namespace Tradonix.Exchanges.Bittrex
             return new MarketSummary()
             {
                 UniqueId = Guid.NewGuid(),
-                CurencyCode = GetCurrencyName(resp.MarketName),
+                //CurencyCode = GetCurrencyName(resp.MarketName),
                 CurrentAskPrice = resp.Ask,
                 CurrentBidPrice = resp.Bid,
                 CurrentOpenBuyOrders = resp.OpenBuyOrders,
@@ -36,8 +36,8 @@ namespace Tradonix.Exchanges.Bittrex
                 TimeStamp = new DateTimeOffset(DateTime.SpecifyKind(resp.TimeStamp, DateTimeKind.Utc)),
 
                 LastPrice = resp.Last,
-                Source = this.Name,
-                TickerCode = GetTickerName(resp.MarketName),
+                //Source = this.Name,
+                //TickerCode = GetTickerName(resp.MarketName),
                 RawData = JsonConvert.SerializeObject(resp)
             };
         }

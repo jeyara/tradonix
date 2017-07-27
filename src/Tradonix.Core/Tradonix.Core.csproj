@@ -56,6 +56,7 @@
     <Compile Include="Services\Infra\ILoggingService.cs" />
     <Compile Include="Services\Infra\ISettingService.cs" />
     <Compile Include="Services\Meta\IMetaService.cs" />
+    <Compile Include="Services\Transaction\ITransactionService.cs" />
     <Compile Include="UI\IUIPage.cs" />
     <Compile Include="UI\UITypeEnum.cs" />
     <Compile Include="UI\OptionData.cs" />

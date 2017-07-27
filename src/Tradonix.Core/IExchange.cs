@@ -1,6 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Tradonix.Core.Entities;
+using Tradonix.Core.Entities.Meta;
+using Tradonix.Core.Services.Meta;
+using Tradonix.Core.Services.Transaction;
+using Tradonix.Services.Infra;
 
 namespace Tradonix.Core
 {
@@ -8,12 +11,17 @@ namespace Tradonix.Core
     {
         string Name { get; }
 
-        IList<string> GetSupportedCurrencies();
+        void Initialize(
+            ILoggingService loggingService, 
+            ISettingService settingService, 
+            IMetaService metaService,
+            ITransactionService transactionService
+            );
 
-        IList<string> GetSupportedTickers();
+        void SyncAllTickers();
 
-        IList<MarketSummary> GetMarketSummariesAll();
+        void GetAllMarketSummaries();
 
-        MarketSummary GetMarketSummaryByTicker(string ticker);
+        void GetInDepthMarketDataByTicker(string ticker);
     }
 }

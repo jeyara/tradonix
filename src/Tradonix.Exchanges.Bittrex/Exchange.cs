@@ -1,12 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using Tradonix.Core;
 using Tradonix.Core.Entities;
 using Tradonix.Exchanges.Bittrex.Data;
+using Tradonix.Core.Services.Meta;
+using Tradonix.Core.Services.Transaction;
+using Tradonix.Services.Infra;
 
 namespace Tradonix.Exchanges.Bittrex
 {
@@ -20,7 +19,6 @@ namespace Tradonix.Exchanges.Bittrex
             this.simulate = false;
             this.apiCall = new ApiCall(this.simulate);
         }
-
 
         #region Object Translators
         private MarketSummary GetMarketSummaryFromMarketSummaryResponse(GetMarketSummaryResponse resp)
@@ -46,28 +44,36 @@ namespace Tradonix.Exchanges.Bittrex
 
         #region IExchange
 
-        public string Name { get => "Bittex.com"; }
+        public string Name { get => "Bittex"; }
 
-        public IList<MarketSummary> GetMarketSummariesAll()
-        {
-            var resp = this.Call<GetMarketSummaryResponse[]>(ApiCallGetMarketSummaries);
-            return resp.Select(r => GetMarketSummaryFromMarketSummaryResponse(r)).ToList();
-        }
-
-        public MarketSummary GetMarketSummaryByTicker(string ticker)
-        {
-            var resp = this.Call<GetMarketSummaryResponse[]>(ApiCallGetMarketSummary,
-                Tuple.Create("market", GetMarketName(ticker))).Single();
-
-            return GetMarketSummaryFromMarketSummaryResponse(resp);
-        }
-
-        public IList<string> GetSupportedCurrencies()
+        public void Initialize(ILoggingService loggingService, ISettingService settingService, IMetaService metaService, ITransactionService transactionService)
         {
             throw new NotImplementedException();
         }
 
-        public IList<string> GetSupportedTickers()
+        public void GetAllMarketSummaries()
+        {
+            //Get the exchange object
+
+            //If exchange is not there, insert.
+
+            //Get the list of tickers
+
+            //Get all the market summary
+
+            //Iterate Market summary and insert new ticket if ticker is missing
+            //While build the Market summary list.
+
+            //Insert market summary
+            var resp = this.Call<GetMarketSummaryResponse[]>(ApiCallGetMarketSummaries);
+        }
+
+        public void SyncAllTickers()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GetInDepthMarketDataByTicker(string ticker)
         {
             throw new NotImplementedException();
         }

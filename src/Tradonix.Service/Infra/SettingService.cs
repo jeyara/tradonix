@@ -1,8 +1,8 @@
 ﻿using Tradonix.Core.Entities;
 using Tradonix.Core.Repository;
-using Tradonix.Core.Services;
 using System.Linq;
 using Newtonsoft.Json;
+using Tradonix.Services.Infra;
 
 namespace Tradonix.Service.Infra
 {

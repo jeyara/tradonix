@@ -57,6 +57,7 @@ namespace Tradonix.EFRepository
             modelBuilder.Entity<Exchange>().Property(s => s.AddedBy).IsRequired();
             modelBuilder.Entity<Exchange>().Property(s => s.UpdatedOn).IsOptional();
             modelBuilder.Entity<Exchange>().Property(s => s.UpdatedBy).IsOptional();
+            modelBuilder.Entity<Exchange>().Property(s => s.Name).HasColumnAnnotation(IndexAnnotation.AnnotationName, new IndexAnnotation(new IndexAttribute("IX_Name", 1) { IsUnique = true }));
 
             modelBuilder.Entity<Ticker>().HasKey(s => s.Id);
             modelBuilder.Entity<Ticker>().Property(s => s.Id).IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
@@ -72,6 +73,8 @@ namespace Tradonix.EFRepository
             modelBuilder.Entity<Ticker>().Property(s => s.UpdatedOn).IsOptional();
             modelBuilder.Entity<Ticker>().Property(s => s.UpdatedBy).IsOptional();
             modelBuilder.Entity<Ticker>().Ignore(s => s.TickerType);
+            modelBuilder.Entity<Ticker>().Property(s => s.Code).HasColumnAnnotation(IndexAnnotation.AnnotationName, new IndexAnnotation(new IndexAttribute("IX_Code", 1) { IsUnique = true }));
+
 
             modelBuilder.Entity<ExchangeTicker>().HasKey(s => s.Id);
             modelBuilder.Entity<ExchangeTicker>().Property(s => s.Id).IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
